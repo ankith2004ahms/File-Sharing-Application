@@ -56,7 +56,7 @@ const Upload = () => {
       userName:user?.fullName,
       password:'',
       id:docId,
-      shortUrl:process.env.NEXT_PUBLIC_BASE_URL+docId
+      shortUrl:('https://file-sharing-application-nine.vercel.app/f/'+docId)
     })
     setToast({
       status:'Success!',
