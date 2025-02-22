@@ -69,8 +69,8 @@ const Upload = () => {
     <div>
       <Header/>
        <h2 className='text-[20px] text-center m-5 mt-5'>Start 
-        <strong className='text-primary'> Uploading </strong> 
-        File and <strong className='text-primary'> Share</strong> it</h2>
+        <strong className='text-primary underline'> Uploading </strong> 
+        File and <strong className='text-primary underline'> Share</strong> it:</h2>
       <UploadForm progress={progress} uploadBtnClick={(file)=>uploadFile(file)}/>
       {toast?.status? <Toast 
            toast={toast}

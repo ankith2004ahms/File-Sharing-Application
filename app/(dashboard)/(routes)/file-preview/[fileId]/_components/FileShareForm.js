@@ -74,7 +74,7 @@ function FileShareForm({ file,onPasswordSave }) {
     return file && (
         <div className='flex flex-col border shadow-md gap-2'>
             <div>
-            <label className='text-[14px] text-gray-500'>Short Url</label>
+            <label className='text-[14px] text-gray-600'>Short Url</label>
             <div className='flex gap-5 p-2 border rounded-md justify-between'>
                 <input type="text" value={file.shortUrl} disabled
                     className='disabled:text-gray-500 bg-transparent
