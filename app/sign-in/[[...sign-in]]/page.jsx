@@ -30,7 +30,7 @@ export default function Page() {
           </svg>
         </a>
 
-        <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+        <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl cursor-pointer">
         Welcome to <span className='underline font-bold hover:font-extrabold'><span className='text-slate-500'>Xfer</span>Link:</span> - A File Sharing App 🦑
         </h2>
 
@@ -56,7 +56,7 @@ export default function Page() {
           </a>
 
           <h1
-            className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
+            className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl cursor-pointer"
           >
             Welcome to <span className='underline font-bold hover:font-extrabold'><span className='text-slate-500'>Xfer</span>Link:</span> - A File Sharing App 🦑
           </h1>
