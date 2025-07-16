@@ -67,8 +67,8 @@ const Footer = () => {
                 </a>
               </li>
               <li className="text-gray-400">
-                123 File Street<br />
-                Cloud City, CC 12345
+                #2045 Cloud Street, <br />
+                London City, NY USA 10012,<br /> United Kingdom<br />
               </li>
             </ul>
           </div>
