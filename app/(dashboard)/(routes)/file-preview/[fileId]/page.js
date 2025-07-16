@@ -44,21 +44,44 @@ const FilePreview = ({params}) => {
 
   }
   return (
-    <div>
-        <Header/>
-        <div className='py-10 px-20'>
-    <Link href='/upload' className='flex gap-3'>
-        <ArrowLeftSquare/> Go to Upload </Link>
-      <div className='grid grid-cols-1 md:grid-cols-2 mt-5'>
-        <FileInfo file={file} />
-        <FileShareForm  file={file} 
-        onPasswordSave={(password)=>onPasswordSave(password)}/>
+    <div className="min-h-screen bg-gray-50">
+      <Header/>
+      <div className="pt-20 pb-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <Link href='/upload' className='flex items-center gap-2 text-gray-600 hover:text-blue-600 mb-6 transition-colors'>
+              <ArrowLeftSquare className="w-5 h-5"/>
+          <span>Back to Upload</span>
+        </Link>
+        
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <div className="p-6">
+            <h1 className="text-2xl font-bold text-gray-800 mb-6">File Preview & Share</h1>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* File Preview Section */}
+              <div className="border-r border-gray-100 pr-6">
+                <h2 className="text-lg font-semibold text-gray-700 mb-4">File Details</h2>
+                <FileInfo file={file}/>
+              </div>
+              
+              {/* File Share Section */}
+              <div className="lg:pl-6">
+                <h2 className="text-lg font-semibold text-gray-700 mb-4">Sharing Options</h2>
+                <FileShareForm 
+                  file={file} 
+                  onPasswordSave={(e) => onPasswordSave(e)}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {toast?.status && (
+          <Toast 
+            toast={toast}
+            closeToast={() => setToast(null)}
+          />
+        )}
       </div>
-  </div>
-  {toast?.status? <Toast 
-           toast={toast}
-           closeToast={()=>setToast(null)}
-            />:null}
     </div>
   )
 }

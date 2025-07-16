@@ -66,16 +66,33 @@ const Upload = () => {
   }
  
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50">
       <Header/>
-       <h2 className='text-[20px] text-center m-5 mt-5'>Start 
-        <strong className='text-primary underline'> Uploading </strong> 
-        File and <strong className='text-primary underline'> Share</strong> it:</h2>
-      <UploadForm progress={progress} uploadBtnClick={(file)=>uploadFile(file)}/>
-      {toast?.status? <Toast 
-           toast={toast}
-           closeToast={()=>setToast(null)}
-            />:null}
+      <div className="pt-20 pb-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="text-center mb-8">
+          <h2 className='text-2xl md:text-3xl font-bold text-gray-800'>
+            Start <span className='text-blue-600'>Uploading</span> File and{' '}
+            <span className='text-blue-600'>Share</span> it
+          </h2>
+          <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
+            Quickly upload your files and share them with anyone, anywhere.
+          </p>
+        </div>
+        
+        <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+          <UploadForm 
+            progress={progress} 
+            uploadBtnClick={(file) => uploadFile(file)} 
+          />
+        </div>
+        
+        {toast?.status && (
+          <Toast 
+            toast={toast}
+            closeToast={() => setToast(null)}
+          />
+        )}
+      </div>
     </div>
   )
 }
